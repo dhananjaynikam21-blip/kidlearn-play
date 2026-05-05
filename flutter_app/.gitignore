@@ -1,0 +1,31 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+build/
+flutter_*
+
+# General
+*.DS_Store
+*.log
+*.lock
+*.moved-aside
+*.swp
+*.tmp
+*.temp
+*.bak
+*.orig
+*.save
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Dependency folders
+node_modules/
+bower_components/
+
+# Asset folders
+assets/animations/*.tmp
+assets/images/*.tmp
+assets/sounds/*.tmp
