@@ -1,18 +1,28 @@
 import React from 'react';
+import { AppBar, Box, Toolbar, Typography, Container, Paper } from '@mui/material';
 
-export default function App(){
+function App() {
   return (
-    <div style={{fontFamily: 'Arial, sans-serif', padding: 24}}>
-      <h1>KidLearn Admin Panel (Starter)</h1>
-      <p>Use this dashboard to manage ads, games, levels and feature flags.</p>
-      <section>
-        <h2>Quick Links</h2>
-        <ul>
-          <li>/config - App config (ads, theme)</li>
-          <li>/games - Game list</li>
-          <li>/levels - Levels metadata</li>
-        </ul>
-      </section>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            KidLearn Admin Dashboard
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Container maxWidth="sm" sx={{ mt: 5 }}>
+        <Paper elevation={3} sx={{ p: 3, textAlign: 'center' }}>
+          <Typography variant="h5" gutterBottom>
+            Welcome to KidLearn Admin Dashboard
+          </Typography>
+          <Typography color="text.secondary">
+            Use this dashboard to manage in-app content, ads, and feature configurations!
+          </Typography>
+        </Paper>
+      </Container>
+    </Box>
   );
 }
+
+export default App;
