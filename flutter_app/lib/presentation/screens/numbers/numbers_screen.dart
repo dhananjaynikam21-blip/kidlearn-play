@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
+// import 'package:lottie/lottie.dart'; // Uncomment if using animations
 
 class NumbersScreen extends StatelessWidget {
   const NumbersScreen({super.key});
+
+  Future<void> _playSound(int number) async {
+    final player = AudioPlayer();
+    await player.play(AssetSource('sounds/$number.mp3'));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +34,20 @@ class NumbersScreen extends StatelessWidget {
               padding: const EdgeInsets.all(4),
             ),
             onPressed: () {
-              // TODO: play sound/animation
+              _playSound(number);
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('You tapped $number!'),
                   duration: const Duration(milliseconds: 500),
                 ),
               );
+              // TODO: Trigger animation with Lottie/Rive if assets are available
+              // showDialog(
+              //   context: context,
+              //   builder: (c) => Dialog(
+              //     child: Lottie.asset('assets/animations/$number.json', repeat: false),
+              //   ),
+              // );
             },
             child: Text(
               '$number',
