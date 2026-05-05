@@ -1,0 +1,17 @@
+.dart_tool/
+.packages
+.pub/
+build/
+ios/Flutter/Flutter.framework
+.android/
+.idea/
+.vscode/
+*.iml
+*.lock
+.DS_Store
+node_modules/
+.env
+/dist
+logs/
+*.log
+coverage/

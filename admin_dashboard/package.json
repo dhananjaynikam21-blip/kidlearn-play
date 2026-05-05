@@ -1,0 +1,14 @@
+{
+  "name": "kidlearn-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "axios": "^1.0.0"
+  },
+  "scripts": {
+    "start": "npx serve -s build || react-scripts start",
+    "build": "echo \"Build step placeholder\""
+  }
+}
